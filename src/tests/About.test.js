@@ -5,7 +5,21 @@ import { render, screen } from '@testing-library/react';
 
 import App from '../App';
 
-describe('Teste se a página contém as informações sobre a Pokédex', () => {
+describe('2. Teste o componente', () => {
+  test('Teste se a página contém as informações sobre a Pokédex', () => {
+    const customHistory = createMemoryHistory();
+    render(
+      <Router history={ customHistory }>
+        <App />
+      </Router>,
+    );
+
+    customHistory.push('/about');
+
+    const paragraphEl1 = screen.getByText(/This application simulates a Pokédex/i);
+    expect(paragraphEl1).toBeInTheDocument();
+  });
+
   test('Teste se a página contém um heading `h2` com o texto `About Pokédex`', () => {
     const customHistory = createMemoryHistory();
     render(

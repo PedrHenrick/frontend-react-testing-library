@@ -39,7 +39,9 @@ describe('Teste se o topo da aplicação contém um conjunto fixo de links', () 
     const favLinkEl = screen.getByRole('link', { name: /favorite pokémons/i });
     expect(favLinkEl).toBeInTheDocument();
   });
+});
 
+describe('Teste se ao clicar no link você é redirecionado para a página', () => {
   test('Teste ao clicar no link `Home` você vai para `/`', () => {
     const customHistory = createMemoryHistory();
     render(
@@ -101,7 +103,3 @@ describe('Teste se o topo da aplicação contém um conjunto fixo de links', () 
     expect(notFoundEl).toBeInTheDocument();
   });
 });
-
-/*
-  - .
-*/

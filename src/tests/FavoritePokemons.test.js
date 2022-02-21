@@ -6,7 +6,7 @@ import userEvent from '@testing-library/user-event';
 
 import App from '../App';
 
-describe('3. Teste o componente', () => {
+describe('Teste se a página de Favoritos é renderizada corretamente', () => {
   test('Teste se é exibido na tela a mensagem `No favorite pokemon found`', () => {
     const customHistory = createMemoryHistory();
     render(
@@ -21,7 +21,7 @@ describe('3. Teste o componente', () => {
     expect(favNullEl).toBeInTheDocument();
   });
 
-  test('O segundo link deve possuir o texto `About`', () => {
+  test('Teste se é exibido todos os cards de pokémons favoritados', () => {
     const customHistory = createMemoryHistory();
     render(
       <Router history={ customHistory }>

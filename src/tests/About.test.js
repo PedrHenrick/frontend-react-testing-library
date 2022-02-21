@@ -5,7 +5,7 @@ import { render, screen } from '@testing-library/react';
 
 import App from '../App';
 
-describe('2. Teste o componente', () => {
+describe('Teste se a página About é renderizada corretamente', () => {
   test('Teste se a página contém as informações sobre a Pokédex', () => {
     const customHistory = createMemoryHistory();
     render(

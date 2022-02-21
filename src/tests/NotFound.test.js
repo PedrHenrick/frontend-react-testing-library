@@ -6,7 +6,7 @@ import { render, screen } from '@testing-library/react';
 
 import App from '../App';
 
-describe('4. Teste o componente `<NotFound.js />`', () => {
+describe('Teste se a url está errada é renderizada a página not found', () => {
   test('Teste se página contém um `h2` com o texto `Page requested not found 😭`', () => {
     const customHistory = createMemoryHistory();
     render(
